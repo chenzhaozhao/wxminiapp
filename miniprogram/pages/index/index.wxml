@@ -1,0 +1,23 @@
+<view class="viewbox bg-color">
+  <block wx:if="{{canGetUser}}">
+    <view>
+      <view class="tab_bar" bindtap="changeTab">
+        <text id='await' class="{{activeTab===1?'tab_active tab_item':'tab_item'}}">待拼成 ({{count.start}})</text>
+        <text id='finish' class="{{activeTab===2?'tab_active tab_item':'tab_item'}}">已拼成 （{{count.success}}）</text>
+        <text id='expried' class="{{activeTab===3?'tab_active tab_item':'tab_item'}}">已过期 （{{count.expired}}）</text>
+        <text id='completed' class="{{activeTab===5?'tab_active tab_item':'tab_item'}}">已完成 （{{count.done}}）</text>
+      </view>
+      <scroll-view class="product" scroll-y="true" style="height:82vh;" bindscrolltoupper="upper"
+        bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view class="product-item" wx:for="{{items}}" wx:key="_index">
+          <product-card product="{{item}}" bindreload="reload" />
+        </view>
+      </scroll-view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="get_user">
+      <button type="primary" bindtap="getUserProfile">获取头像昵称</button>
+    </view>
+  </block>
+</view>

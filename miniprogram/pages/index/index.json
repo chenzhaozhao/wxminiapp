@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "product-card": "/compoment/productCard/productCard",
+    "recycle-view": "/compoment/virtualList/recycle-view",
+    "recycle-item": "/compoment/virtualList/recycle-item"
+  },
+  "navigationBarTitleText": "我的剧本",
+  "disableScroll":true
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "product-card": "/compoment/orderCard/orderCard",
+    "recycle-view": "/compoment/virtualList/recycle-view",
+    "recycle-item": "/compoment/virtualList/recycle-item"
+  },
+  "navigationBarTitleText": "本店发布",
+  "disableScroll":true
+}

@@ -1,0 +1,36 @@
+<view class="product" bindtap="goDetail">
+  <mp-row>
+    <mp-col span="{{24}}">
+      <view>
+        <text class="title">{{product.name}}</text><text style="margin-left:20rpx">{{product.price}}￥/人</text>
+      </view>
+    </mp-col>
+  </mp-row>
+  <view class="flex flex-wrap" style="margin-top:10rpx">
+    <view class="tag" wx:for="{{product.tags}}" wx:key="index" style="border-color:{{item.color}};color:{{item.color}}">
+      {{item.tag}}</view>
+  </view>
+  <view class="item">
+    开始时间 ：{{product.start_time}}
+  </view>
+  <mp-row>
+    <mp-col span="{{12}}"><text>待拼成</text></mp-col>
+    <mp-col span="{{6}}">
+      <view>男：{{product.male}} {{product.persons.length}}/ {{product.male_num}}</view>
+    </mp-col>
+    <mp-col span="{{6}}">
+      <view>女：{{product.persons.length}} / {{product.female_num}}</view>
+    </mp-col>
+  </mp-row>
+  <view class="line"></view>
+  <mp-row>
+    <view>
+    <mp-col span="{{12}}">
+      <button size="mini" class="button" type="primary" catchtap="edit" style="background-color:#02A7F0">修改</button>
+    </mp-col>
+  </view>
+    <view>
+    <mp-col span="{{12}}"><button size="mini" class="button" type="warn" catchtap="cancel">取消</button></mp-col>
+  </view>
+  </mp-row>
+</view>

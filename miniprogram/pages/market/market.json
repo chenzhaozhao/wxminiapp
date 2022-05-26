@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "product-card": "/compoment/productCard/productCard",
+    "recycle-view": "/compoment/virtualList/recycle-view",
+    "recycle-item": "/compoment/virtualList/recycle-item"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "剧本广场"
+}

@@ -1,0 +1,50 @@
+/**index.wxss**/
+.viewbox {
+  height: 100vh;
+  border-top: 1px solid #cccccc;
+}
+.tab_bar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 500;
+  font-size: 28rpx;
+  background-color:#ffffff;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.tab_active {
+  color: #02A7F0;
+  border-bottom: 1px solid #02A7F0;
+}
+.product {
+  position: fixed;
+  top: 70rpx;
+  box-sizing: border-box;
+  height: 732*2rpx;
+}
+
+.product-item {
+  display: flex;
+  margin: 10rpx;
+  align-items: center;
+  justify-content: center;
+}
+.get_user{display:flex;justify-content: center;align-items: center;height: 100%;}
+.create_task {
+  position: fixed;
+  bottom: 170rpx;
+  z-index: 100;
+  right: 25px;
+  background-color: white;
+  border:1px solid #000000;
+  width: 86rpx;
+  height: 86rpx;
+  text-align: center;
+  line-height: 86rpx;
+  border-radius: 100%;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}

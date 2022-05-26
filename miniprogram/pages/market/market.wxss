@@ -1,0 +1,59 @@
+/* miniprogram/pages/market/market.wxss */
+.marketview {
+  border-top: 1rpx solid #cccccc;
+  height: 100vh;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+
+.search_bar {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background-color: #ffffff;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.input {
+  width: 350rpx;
+  border-radius: 5rpx;
+  background-color: #f2f2f2;
+  padding-left: 10rpx;
+  height: 27px;
+  display: block;
+}
+
+.calendar {
+  font-size: 40rpx;
+}
+
+.product {
+  position: fixed;
+  top: 90rpx;
+  box-sizing: border-box;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create_task {
+  position: fixed;
+  bottom: 170rpx;
+  z-index: 100;
+  right: 25px;
+  background-color: white;
+  border:1px solid #000000;
+  width: 86rpx;
+  height: 86rpx;
+  text-align: center;
+  line-height: 86rpx;
+  border-radius: 100%;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}

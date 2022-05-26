@@ -1,0 +1,31 @@
+/* miniprogram/pages/detail/detail.wxss */
+.detail {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex{display:flex;align-items: center;margin:20rpx 0;}
+.store {
+  width: 96vw;
+  background-color: #ffffff;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.avatarUrl{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+}
+.flex-1{
+  flex:1;
+  text-align: center;
+}

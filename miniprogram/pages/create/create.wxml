@@ -1,0 +1,80 @@
+<view class="task_container bg-color">
+  <view class="context">
+    <form catchsubmit="createTask" catchreset="formReset">
+      <view class="form-item">
+        <view class="title">
+          剧本名称
+        </view>
+        <picker class="border-input" range="{{names}}" bindchange="selectItem" id="NAME">
+          <view>{{names[nameIndex]}}</view>
+        </picker>
+      </view>
+      <view class="form-item">
+        <view class="title">
+          时间
+        </view>
+        <view class="flex">
+          <picker mode="date" class="border-input width-50" style="margin-right:42rpx" bindchange="selectItem"
+            id="STARTDATE">
+            <view>{{startDate}}</view>
+          </picker>
+          <picker mode="time" class="border-input width-50" bindchange="selectItem" id="STARTTIME">
+            <view>{{startTime}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="form-item">
+        <!-- catchtap="gomap" -->
+        <view class="title">
+          地点（店铺地址）
+          <!-- <text style="font-weight:400;color:#02A7F0">去选择 ></text> -->
+        </view>
+        <!-- <view class="height_60 border-input" style="margin-top:12rpx">{{address}}</view> -->
+        <input class="height_60 border-input" bindchange="selectItem" id="ADDRESS"></input>
+      </view>
+      <view class="form-item">
+        <view class="title">
+          剧本人数
+        </view>
+        <view>
+          <input type="number" bindchange="selectItem" id="LIMIT"   class="border-input" style="width:186rpx" />
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="title">空缺人员</view>
+        <radio-group bindchange="selectItem" id="CANSEX">
+          <view>
+            <radio value="1" class="width-50" color="#F6A623">可反串</radio>
+            <radio value="0" class="" checked="{{1}}" color="#F6A623">不可反串</radio>
+          </view>
+        </radio-group>
+      </view>
+      <view style="height:60rpx;line-height:60rpx" class="margin-y">
+        <view class="flex">
+          <text style="margin-right:26rpx">男</text><input type="number" style="margin-right:20rpx" class="border-input"
+            id="MALE" bindchange="selectItem" />
+          <text style="margin-right:26rpx">女</text><input type="number" bindchange="selectItem" class="border-input"
+            id="FEMALE" />
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="title">预估费用</view>
+        <view class="flex">
+          <input type="number" style="width:186rpx;margin-right:16rpx" class="border-input" id="PRICE"
+            bindchange="selectItem" /><text>元/人</text>
+        </view>
+      </view>
+      <view class="title" style="height:60rpx;line-height:60rpx">
+        标签
+      </view>
+      <view class="tags">
+        <view wx:for="{{tags}}" class="{{selectedTag[index]?'tag_selected tag':'tag'}}" wx:key="index" id="{{index}}"
+          catchtap="selectedTag">{{item.name}}</view>
+      </view>
+      <view>
+        <button type="primary" style="width:100%;background-color:#02A7F0" formType="submit">确认创建</button>
+      </view>
+    </form>
+  </view>
+
+</view>

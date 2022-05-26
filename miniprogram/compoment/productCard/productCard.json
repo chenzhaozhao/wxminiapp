@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mp-row":"/compoment/row/",
+    "mp-col":"/compoment/col/"
+  },
+  "disableScroll": true
+}

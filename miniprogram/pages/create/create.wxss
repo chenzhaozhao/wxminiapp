@@ -1,0 +1,70 @@
+/* miniprogram/pages/create/create.wxss */
+.task_container {
+  padding: 20rpx;
+  font-size: 24rpx;
+  overflow:scroll;
+  margin-bottom: 20rpx;
+}
+
+.context {
+  background-color: #ffffff;
+  border: 1rpx solid #ffffff;
+  border-radius: 10rpx;
+  overflow:scroll;
+  padding: 0 10px 10px 10px;
+
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.form-item {
+  width: 100%;
+  line-height: 60rpx;
+  box-sizing: border-box;
+  margin: 12rpx 0
+}
+
+.border-input {
+  border: 2rpx solid #f2f2f2;
+  border-radius: 10rpx;
+  text-indent: 10rpx;
+  margin: 12rpx 0;
+  background-color: #f2f2f2;
+}
+.margin-y{
+  margin: 12px 0;
+}
+.title {
+  font-size: 30rpx;
+  font-weight: 400;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30rpx;
+}
+
+.tag {
+  width: 80rpx;
+  height: 40rpx;
+  border: 1px solid #ccc;
+  margin: 10rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.tag_selected {
+  background-color: rgba(254, 247, 227, 1);
+  color: #F6A623;
+}

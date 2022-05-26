@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "product-card": "/compoment/productCard/productCard"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText":"拼车详情"
+}

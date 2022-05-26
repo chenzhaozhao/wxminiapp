@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "product-card": "/compoment/orderCard/orderCard",
+    "mp-row":"/compoment/row/",
+    "mp-col":"/compoment/col/"
+  },
+  "navigationBarTitleText": "拼车详情",
+  "disableScroll":true
+}

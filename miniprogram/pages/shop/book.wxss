@@ -1,0 +1,30 @@
+.main {
+  background-color:#f2f2f2;
+  padding: 22px 0;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100vh;
+}
+
+
+.mx-10{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.p-10{
+ padding: 10px;
+}
+.text-xs{
+  font-size: 12px;
+}
+.border-bottom{
+  border-bottom: 2px solid #ccc;
+}
+.height-50{
+  height: 50px;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-row": "/compoment/row/",
+    "mp-col": "/compoment/col/"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "个人中心"
+}

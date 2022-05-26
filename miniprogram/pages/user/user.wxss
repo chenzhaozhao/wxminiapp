@@ -1,0 +1,76 @@
+.userinfo {
+  height: 100vh;
+  overflow: hidden;
+  font-size: 28rpx;
+}
+
+.get_user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.user {
+  padding: 20rpx;
+}
+
+.base_info {
+  display: flex;
+  align-items: center;
+  padding: 28rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+
+.user_img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  border: 1px solid #cccccc;
+  margin-right: 60rpx;
+}
+
+.content {
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  background-color: #ffffff;
+}
+.content_item{
+  height:100rpx;
+  line-height: 100rpx;
+  padding: 0rpx 40rpx;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.no_border{
+  border: none;
+}
+.sex-img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left:40rpx;
+}
+.flex{
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.font-bold{
+font-weight: bold;
+}
+.font-xl{
+  font-size: 20px;
+}
+.store{
+  margin: 20px 10px;
+  background-color: #ffffff;
+  height: 78%;
+  padding: 20px;
+}
+.submit{
+  background-color: #03a9f4;
+  color: #ffffff;
+}

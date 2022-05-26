@@ -1,0 +1,24 @@
+<view class="bg-color h-full pd-10">
+<view class="backgroud-white" style="height:50vh;padding-top:10px;">
+  <view class="flex items-center mx-10 content-between mx-10 mt-10">
+    <view>店铺名</view>
+    <view><button size="mini" class="font-zise-mini font-weight-normal color-blue" id="name" bindtap="edit">去修改</button></view>
+  </view>
+  <view class="flex items-center mx-10 content-between mx-10 mt-30">
+    <view>店铺地址</view>
+    <view><button size="mini" class="font-zise-mini font-weight-normal color-blue" id="addres" bindtap="edit">去修改</button></view>
+  </view>
+  <view class="flex items-center mx-10 content-between mx-10 mt-30">
+    <view>客服微信号</view>
+    <view><button size="mini" class="font-zise-mini font-weight-normal color-blue" id="wx" bindtap="edit">去修改</button></view>
+  </view>
+  <view class="flex items-center mx-10 content-between mx-10 mt-30">
+    <view>店铺本子库维护</view>
+    <view><button size="mini" class="font-zise-mini font-weight-normal color-blue" bindtap="manageBook">去修改</button></view>
+  </view>
+  <view class="flex items-center mx-10 content-between mx-10 mt-30">
+    <view>店铺资质证明</view>
+    <view><button size="mini" class="font-zise-mini font-weight-normal color-blue" bindtap="postimg">上传图片</button></view>
+  </view>
+</view>
+</view>

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="viewbox bg-color">
+  <view>
+    <view class="tab_bar" bindtap="changeTab">
+      <text id='await' class="{{activeTab===1?'tab_active tab_item':'tab_item'}}">待拼成</text>
+      <text id='finish' class="{{activeTab===2?'tab_active tab_item':'tab_item'}}">已拼成</text>
+      <text id='expried' class="{{activeTab===3?'tab_active tab_item':'tab_item'}}">已过期</text>
+      <text id='completed' class="{{activeTab===4?'tab_active tab_item':'tab_item'}}">已完成</text>
+    </view>
+    <recycle-view batch="{{batchSetRecycleData}}" id="me" class="product" bindscroll="scroll">
+      <recycle-item class="product-item" wx:for="{{meList}}" wx:key="_index">
+        <view>
+          <product-card product="{{item}}" bindreload="reload" />
+        </view>
+      </recycle-item>
+      <recycle-item class="product-item">
+        <view style="height:200px">
+        </view>
+      </recycle-item>
+    </recycle-view>
+  </view>
+  <view class="create_task" catchtap="goTask">+发布</view>
+</view>

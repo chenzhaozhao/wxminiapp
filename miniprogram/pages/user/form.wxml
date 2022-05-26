@@ -1,0 +1,32 @@
+<view class="store bg-color">
+  <view style="background-color: #FFFFFF;padding: 10px;border-radius: 8px;">
+    <view>
+      <text>店铺名</text>
+      <input class="custom-input mt-10" id="name"  bindblur="setItems"></input>
+    </view>
+    <view class="mt-30">
+      <text>店铺地址</text>
+      <input class="custom-input mt-10" id="address" bindblur="setItems"></input>
+    </view>
+    <view class="mt-30">
+      <text>客服微信号</text>
+      <input class="custom-input mt-10" id="wechat" bindblur="setItems" ></input>
+    </view>
+    <view class="mt-30">
+      <text>店铺资质证明</text>
+      <view class="mt-10">提供营业执照或相关能证明店铺归属的材料</view>
+      <view>
+        <button size="mini" class="mt-10 font-zise-mini font-weight-normal color-blue" bindtap="postimg"
+          type="">上传图片</button>
+      </view>
+    </view>
+    <view class="mt-30">
+      <text>速通码</text>
+      <input class="custom-input mt-10" placeholder="如果没有可不填" id="code" bindblur="setItems"></input>
+      <text class="mt-10">如有问题，可联系微信号：gcz1995</text>
+    </view>
+    <view class="mt-30" style="margin-bottom:20px">
+      <button class="submit" style="color: #fff;background-color:#02a7f0;" bindtap="submit">提交审核</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<view class="userinfo bg-color">
+  <block wx:if="{{!canGetUser}}">
+    <view class="get_user">
+      <button type="primary" bindtap="getUserProfile"> 获取头像昵称
+      </button>
+    </view>
+  </block>
+  <block wx:else>
+    <block wx:if="{{role===1}}">
+      <view class="user">
+        <view class="base_info">
+          <image class="user_img" src="{{user.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{user.nickName}}</text>
+        </view>
+        <view class="content">
+          <view class="content_item">
+            <view>性别</view>
+            <view class="flex items-center font-zise-mini">
+              <view>男</view>
+              <button size="mini" class="font-zise-mini font-weight-normal color-blue ml-28" bindtap="editProfile"
+                id="sex">修改</button>
+            </view>
+          </view>
+          <view class="content_item">
+            <view>联系方式</view>
+            <view class="flex items-center font-zise-mini">
+              <view>18516417069</view>
+              <button size="mini" class="font-zise-mini font-weight-normal color-blue ml-28" bindtap="editProfile"
+                id="phone">修改</button>
+            </view>
+          </view>
+          <view class="content_item" catchtap="changeUser">
+            切换角色</view>
+          <view class="content_item no_border" bindtap="report">意见反馈</view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="user">
+        <view class="base_info flex justify-between">
+          <view class="font-bold font-xl">福来客栈</view>
+          <view class="userinfo-nickname">已认证</view>
+        </view>
+        <view class="content">
+          <view class="content_item">
+            <view>店铺信息维护</view>
+            <view class="flex items-center font-zise-mini">
+              <button size="mini" class="font-zise-mini font-weight-normal color-blue ml-28"
+                bindtap="editShop">去修改</button>
+            </view>
+          </view>
+          <view class="content_item" catchtap="changeUser">
+            切换角色</view>
+          <view class="content_item no_border" bindtap="report">意见反馈</view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>

@@ -1,0 +1,20 @@
+<view class="detail bg-color">
+<product-card product="{{product}}" class="product" />
+<view class="store" >
+<mp-row>
+<mp-col span="{{24}}">拼车成员</mp-col>
+</mp-row>
+<view class="flex">
+<view class="flex-1"><text>头像</text></view>
+<view class="flex-1"><text>昵称</text></view>
+<view class="flex-1"><text>性别</text></view>
+<view class="flex-1"><text>联系方式</text></view>
+</view>
+<view class="flex" wx:for="{{members}}" wx:key="index">
+<view class="flex-1"><image class="avatarUrl" src="{{item.avatarUrl}}"></image></view>
+<view class="flex-1"><text>{{item.nickName}}</text></view>
+<view class="flex-1"><text>{{item.gender===1?"男":"女"}}</text></view>
+<view class="flex-1"><text>{{item.city}}</text></view>
+</view>
+</view>
+</view>

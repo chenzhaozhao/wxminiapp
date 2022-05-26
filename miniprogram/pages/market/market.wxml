@@ -1,0 +1,39 @@
+<!--miniprogram/pages/market/market.wxml-->
+<view class="marketview bg-color">
+	<view class="search_bar">
+		<picker class="way" bindchange="selectCondition" value="{{0}}" range="{{ways}}" id="way">
+			<view style="display:flex;align-items:center">
+				<text style="margin-right:6rpx;font-size:28rpx;font-weight:650">{{ways[wayIndex]}}</text>
+				<image src="../../image/down.png" style="width:28rpx;height:16rpx;margin-top:13rpx"></image>
+			</view>
+		</picker>
+		<view>
+			<input class='input' bindchange="selectCondition" placeholder="请输入剧本名或者店铺名" id="name" />
+		</view>
+		<picker bindchange="selectCondition" mode="date" class="time" id="date">
+			<image src="../../image/calendar.png" style="width:34rpx;height:34rpx;margin-top:15rpx"></image>
+		</picker>
+		<view>
+			<image catchtap="selectCondition" id="load" src="../../image/refresh.png" style="width:34rpx;height:34rpx;margin-top:15rpx"></image>
+		</view>
+	</view>
+	<scroll-view class="product bg-color" scroll-y="true" style="height:82vh;" bindscrolltoupper="upper"
+        bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view class="product-item" wx:for="{{items}}" wx:key="_index">
+          <product-card product="{{item}}" bindreload="reload" />
+        </view>
+      </scroll-view>
+	<!-- <recycle-view batch="{{batchSetRecycleData}}" id="market" class="product bg-color"   scroll-top="{{scrollTop}}">
+		<recycle-item class="product-item" wx:for="{{marketList}}" wx:key="id">
+			<view>
+				<product-card product="{{item}}" bindreload="reload" />
+			</view>
+		</recycle-item> -->
+   <!-- 为了最后一个元素能正常显示 -->
+		<!-- <recycle-item class="product-item">
+			<view style="height:260rpx">
+			</view>
+		</recycle-item>
+	</recycle-view> -->
+	<view class="create_task" catchtap="goTask">+发布</view>
+</view>

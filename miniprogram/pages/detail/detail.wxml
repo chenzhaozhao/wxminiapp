@@ -1,0 +1,27 @@
+<view class="detail bg-color">
+  <product-card product="{{product}}" class="product" bindreload="reload" />
+  <view class="store">
+    <view class="item">
+      <text style="width:70vw;font-weight:600">店家详情</text>
+      <button type="warn" size="mini" class="button" bindtap="tipOff">举报</button>
+    </view>
+    <view class="item">
+      <text>店铺名称：</text>
+      <text>{{store.name}}</text>
+    </view>
+    <view class="item">
+      <text>详细地址:</text>
+      <text>{{store.address}}</text>
+    </view>
+    <view class="item">
+      <text>在拼数量:</text>
+      <text>{{product.amount}}</text>
+    </view>
+    <view class="item">
+      <text>客服微信:</text>
+      <text>xxxxxx</text>
+    </view>
+    <view class="code">
+    </view>
+  </view>
+</view>

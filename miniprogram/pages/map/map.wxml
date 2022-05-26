@@ -1,0 +1,14 @@
+<view class="box">
+  <view class="weui-cell weui-cell_input">
+    <input type="text" class="custom-input" placeholder="请输入地址" bindfocus="startSelect" bindchange="changeAddress" value="{{addressText}}" />
+  </view>
+  <view class="address" style="display:{{show}}">
+    <view wx:for="{{address}}" wx:key="index" class="address_item" id="{{index}}" catchtap="selectAddress">
+      {{item.title}}
+    </view>
+  </view>
+  <view class="mapview">
+    <map class="map" latitude="{{latitude}}" longitude="{{longitude}}" enable-building="true" scale="16"
+      markers="{{[marker]}}" bindtap="goaddress"></map>
+  </view>
+</view>

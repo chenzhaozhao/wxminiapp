@@ -1,0 +1,56 @@
+<view class="product" bindtap="goDetail">
+  <mp-row>
+    <mp-col span="{{21}}">
+      <view>
+        <text class="title">{{product.title}}</text><text style="margin-left:20rpx">
+          {{product.amount}}￥/人</text>
+      </view>
+    </mp-col>
+    <view>
+      <mp-col span="{{3}}">
+        <view class="" catchtap="collection">
+          <image wx:if="{{product.favoriteStatus===1}}" src="../../image/star_active.png" class="star"></image>
+          <image wx:else src="../../image/star.png" class="star"></image>
+        </view>
+      </mp-col>
+    </view>
+  </mp-row>
+  <view class="flex flex-wrap" style="margin-top:10rpx">
+    <view class=" tag" wx:for="{{product.tags}}" wx:key="index">
+      {{item.name}}</view>
+  </view>
+  <view class="item">
+    开始时间 ：{{start_time}}
+  </view>
+  <mp-row>
+    <mp-col span="{{19}}">
+      <text>{{product.address}}</text>
+    </mp-col>
+    <mp-col span="{{5}}">
+      <text>距您{{product.distance ||0}}km</text>
+    </mp-col>
+  </mp-row>
+  <view class="line"></view>
+  <view class="flex">
+    <view style="flex:1">
+      <text wx:if="{{product.partStatus===2}}">已加入</text>
+      <text wx:if="{{product.partStatus!==2}}">未加入</text>
+    </view>
+    <view style="flex:3" class="flex">
+      <view>男：{{product.curMale || 0}}/ {{product.limitMale}}</view>
+      <view wx:if="{{sex===0}}">
+        <view wx:if="{{product.partStatus===2}}" id='1' class="button_primary" catchtap="order">退出</view>
+        <view wx:if="{{product.partStatus===1 || product.partStatus===null}}" id='2' class="button_normal"
+          catchtap="order">加入</view>
+      </view>
+    </view>
+    <view style="flex:3" class="flex">
+      <view>女：{{product.curFemale || 0}} / {{product.limitFemal}}</view>
+      <view wx:if="{{sex===1}}">
+        <view wx:if="{{product.partStatus===2}}" id="3" class="button_primary" catchtap="order">退出</view>
+        <view wx:if="{{product.partStatus===1 || product.partStatus===null}}" id="4" class="button_normal"
+          catchtap="order">加入</view>
+      </view>
+    </view>
+  </view>
+</view>
